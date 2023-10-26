@@ -6,25 +6,28 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'folke/tokyonight.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'mbbill/undotree'
-  use 'simrat39/rust-tools.nvim' 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
+	  branch = 'v1.x',
 	  requires = {
-		  --- Uncomment these if you want to manage LSP servers from neovim
-		  -- {'williamboman/mason.nvim'},
-		  -- {'williamboman/mason-lspconfig.nvim'},
-
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
-		  {"williamboman/nvim-lsp-installer"},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
+
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
 		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'hrsh7th/cmp-vsnip'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
 	  }
   }
   use {'nvim-treesitter/nvim-treesitter',
