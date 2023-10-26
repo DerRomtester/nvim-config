@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
   use 'mbbill/undotree'
+  use 'simrat39/rust-tools.nvim' 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
