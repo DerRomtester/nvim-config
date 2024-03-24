@@ -6,8 +6,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use { "folke/tokyonight" }
   use 'mbbill/undotree'
+  use { "ellisonleao/gruvbox.nvim" }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
